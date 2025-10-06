@@ -56,12 +56,13 @@
 	var lastScrollTop = "";
 	function stickyMenu($targetMenu, $toggleClass) {
 		var st = $(window).scrollTop();
-		if ($(window).scrollTop() > 500) {
-			if (st > lastScrollTop) {
-				$targetMenu.removeClass($toggleClass);
-			} else {
-				$targetMenu.addClass($toggleClass);
-			}
+		if ($(window).scrollTop() > 70) {
+			// if (st > lastScrollTop) {
+			// 	$targetMenu.removeClass($toggleClass);
+			// } else {
+			// 	$targetMenu.addClass($toggleClass);
+			// }
+			$targetMenu.addClass($toggleClass);
 		} else {
 			$targetMenu.removeClass($toggleClass);
 		}
@@ -1069,7 +1070,7 @@
 						($(this).is("a", "button") &&
 							$(this).closest(".cursor-pointer").length) ||
 							(e.classList.remove("cursor-hover"),
-							t.classList.remove("cursor-hover"));
+								t.classList.remove("cursor-hover"));
 					}),
 					(e.style.visibility = "visible"),
 					(t.style.visibility = "visible");
@@ -1161,8 +1162,8 @@
 
 	$(window).on("load", function () {
 		/*------------------------------------------------------
-    /  WoW Js
-    /------------------------------------------------------*/
+	/  WoW Js
+	/------------------------------------------------------*/
 		var wow = new WOW({
 			boxClass: "wow", // default
 			animateClass: "animated", // default
